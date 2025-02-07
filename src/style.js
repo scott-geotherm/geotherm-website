@@ -13,6 +13,13 @@ const styles = {
 
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
+
+  container: {
+    backgroundColor: '#000000',
+    color: '#ffffff',
+    minHeight: '100vh',
+    padding: '20px',
+  },
 }
 
 export const layout = {
