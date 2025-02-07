@@ -23,7 +23,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
   </div>
 )
 
-const Business = () => {
+const Business = ({ handleOpenModal }) => {
   return (
     <section id='features' className={layout.section}>
       <div className={layout.sectionInfo}>
@@ -34,7 +34,9 @@ const Business = () => {
           Generate a report in minutes and use it
           to approve permits in record time.
         </p>
-        <Button styles='mt-10'/>
+        <Button styles='mt-10' onClick={handleOpenModal}>
+          Pre Launch Access
+        </Button>
       </div>
       <div className={`${layout.sectionImg} flex-col`}>
         {features.map((feature, index) => (

@@ -3,7 +3,7 @@ import { card } from '../assets'
 import Button from './Button'
 import styles, { layout } from '../style'
 
-const CardDeal = () => {
+const CardDeal = ({ handleOpenModal }) => {
   return (
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
@@ -14,7 +14,9 @@ const CardDeal = () => {
           Aliquet quis aliquet eget mauris tortor.ç 
           Aliquet ultrices ac, ametau.
         </p>
-        <Button styles='mt-10'/>
+        <Button styles='mt-10' onClick={handleOpenModal}>
+          Pre Launch Access
+        </Button>
       </div>
       <div className={layout.sectionImg}>
         <img

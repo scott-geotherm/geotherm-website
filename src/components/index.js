@@ -9,6 +9,7 @@ import Hero from './Hero'
 import Navbar from './Navbar'
 import Stats from './Stats'
 import Testimonials from './Testimonials'
+import GetStarted from './GetStarted'
 
 export {
     Billing,
@@ -21,5 +22,6 @@ export {
     Hero,
     Navbar,
     Stats,
-    Testimonials
+    Testimonials,
+    GetStarted
 }

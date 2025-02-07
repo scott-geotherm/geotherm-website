@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
   Billing, 
   Business, 
@@ -9,27 +9,48 @@ import {
   Hero, 
   Navbar, 
   Stats, 
-  Testimonials 
+  Testimonials,
+  GetStarted
 } from './components'
 import styles from './style'
 import ChatBot from './components/ChatBot'
+import Modal from './components/Modal'
+import './App.css'
 
 const App = () => {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const handleOpenModal = () => {
+    console.log('Modal should open');
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  console.log('App component rendering');
+  console.log('handleOpenModal:', handleOpenModal);
+
   return (
     <div style={styles.container}>
       <div className={styles.paddingX}>
         <Navbar/>
-        <Hero/>
+        <Hero handleOpenModal={handleOpenModal} />
+       
         <Stats/>
-        <Business/>
+        <Business handleOpenModal={handleOpenModal} />
         <Billing/>
-        <CardDeal/>
+        <CardDeal handleOpenModal={handleOpenModal} />
         <Testimonials/>
+
         <Clients/>
-        <CTA/>
+        <CTA handleOpenModal={handleOpenModal} />
+        <GetStarted handleOpenModal={handleOpenModal} />
         <Footer/>
       </div>
       <ChatBot />
+      <Modal isVisible={isModalVisible} onClose={handleCloseModal} />
     </div>
   )
 }
