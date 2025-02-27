@@ -28,23 +28,26 @@ const Business = ({ handleOpenModal }) => {
     <section id='features' className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>Automate your checks, <br className='sm:block hidden'/>With our agent who will handle the process.</h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Our Permmit Assist Agent, uses LLMs and our contextual map to automate permit checks,
-          improving the speed and effiecncy of your handling process.
-          Generate a report in minutes and use it
-          to approve permits in record time.
-        </p>
+        
+        <div style={{ marginLeft: '50px', borderColor: 'red' }}>
+          <p className={`${styles.paragraph} max-w-[570px] mt-5`}>
+            Our Permmit Assist Agent, uses LLMs and our contextual map to automate permit checks,
+            improving the speed and effiecncy of your handling process.
+            Generate a report in minutes and use it
+            to approve permits in record time.
+          </p>
+        </div>
         <Button styles='mt-10' onClick={handleOpenModal}>
           Pre Launch Access
         </Button>
       </div>
-      <div className={`${layout.sectionImg} flex-col`}>
+      <div className={`${layout.sectionImg} flex-col`} >
         {features.map((feature, index) => (
           <FeatureCard key={feature.id} {...feature} index={index}/>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
 export default Business

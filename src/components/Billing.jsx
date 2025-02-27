@@ -1,8 +1,8 @@
-import React from 'react'
-import { apple, bill, google } from '../assets'
-import styles, { layout } from '../style'
+import React from 'react';
+import { bill, discount } from '../assets';
+import styles, { layout } from '../style';
 
-const Billing = () => {
+const Billing = ({ handleOpenModal }) => {
   return (
     <section id='product' className={layout.sectionReverse}>
       <div className={layout.sectionImgReverse}>
@@ -16,26 +16,33 @@ const Billing = () => {
       </div>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>Easily see how outcome <br className='sm:block hidden'/> was reached.</h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Our Agents report details the  rational behind findings,
-          Mauris eu adipiscing ultrices ametodio aenean neque.
-          Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
+        <p className={`${styles.paragraph} max-w-[570px] mt-5`}>
+          Transparency is at the core of our AI-powered solutions. 
+          We work to ensure every decision, recommendation, and analysis is traceable, explainable, and backed by data.
+          With clear visual insights and audit-ready reports, 
+          users can confidently trust and verify AI-driven geothermal assessments—making 
+          compliance, planning, and optimization seamless.
         </p>
-        <div className='flex flex-row flex-wrap sm:mt-10 mt-6'>
-          <img
-            src={apple}
-            alt='app-store'
-            className='w-[128px] h-[42px] object-contain mr-5 cursor-pointer'
-          />
-          <img
-            src={google}
-            alt='google-play'
-            className='w-[128px] h-[42px] object-contain cursor-pointer'
-          />
+        <div className='w-full flex justify-end mt-6'>
+          <div className='flex items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2'>
+            <img
+              src={discount}
+              alt='discount'
+              className='w-[32px] h-[32px]'
+            />
+            <button
+              className={`${styles.paragraph} ml-2 bg-transparent border-none cursor-pointer`}
+              onClick={handleOpenModal}
+              style={{ color: 'white', background: 'none', padding: 0, border: 'none' }}
+            >
+              <span className='text-white'>**</span> Sign up now for {" "}
+              <span className='text-white'>Pre Launch</span> Access
+            </button>
+          </div>
         </div>
       </div>  
     </section>
-  )
-}
+  );
+};
 
-export default Billing
+export default Billing;

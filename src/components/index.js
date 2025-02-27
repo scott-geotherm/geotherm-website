@@ -10,6 +10,19 @@ import Navbar from './Navbar'
 import Stats from './Stats'
 import Testimonials from './Testimonials'
 import GetStarted from './GetStarted'
+import ProductPlatform from './ProductPlatform'
+import ProductReporting from './ProductReporting'
+import ProductPermit from './ProductPermit'
+import ProductDataLake from './ProductDataLake'
+import BusinessMain from './BusinessMain'
+import AppIntroduction from './AppIntroduction'
+import StatsGeo from './StatsGeo'
+import StatsInvest from './StatsInvest'
+import ContactForm from './ContactForm'
+import FoundersSection from './FoundersSection'
+import Modal from './Modal'
+import Transparency from './Transparency'
+import References from './References'
 
 export {
     Billing,
@@ -22,6 +35,19 @@ export {
     Hero,
     Navbar,
     Stats,
+    StatsInvest,
     Testimonials,
-    GetStarted
+    GetStarted,
+    ProductPlatform,
+    ProductPermit,
+    ProductDataLake,
+    ProductReporting,
+    BusinessMain,
+    AppIntroduction,
+    StatsGeo,
+    ContactForm,
+    FoundersSection,
+    Modal,
+    Transparency,
+    References
 }

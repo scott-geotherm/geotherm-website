@@ -1,27 +1,33 @@
 import React, { useState } from 'react'
 import { 
-  Billing, 
-  Business, 
-  CardDeal, 
-  Clients, 
-  CTA, 
   Footer, 
   Hero, 
+  ProductPlatform, 
+  ProductPermit, 
+  ProductDataLake, 
+  ProductReporting,
   Navbar, 
-  Stats, 
   Testimonials,
-  GetStarted
+  BusinessMain,
+  Transparency,
+  FoundersSection,
+  AppIntroduction,
+  StatsGeo,
+  Modal,
+  CTA,
+  StatsInvest,
+  References,
 } from './components'
+import GeothermalEnergySection from './components/GeothermalEnergySection'
+import AboutUs from './components/AboutUs'
 import styles from './style'
-import ChatBot from './components/ChatBot'
-import Modal from './components/Modal'
+
 import './App.css'
 
 const App = () => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   const handleOpenModal = () => {
-    console.log('Modal should open');
     setModalVisible(true);
   };
 
@@ -35,22 +41,55 @@ const App = () => {
   return (
     <div style={styles.container}>
       <div className={styles.paddingX}>
-        <Navbar/>
-        <Hero handleOpenModal={handleOpenModal} />
-       
-        <Stats/>
-        <Business handleOpenModal={handleOpenModal} />
-        <Billing/>
-        <CardDeal handleOpenModal={handleOpenModal} />
-        <Testimonials/>
+        <Navbar handleOpenModal={handleOpenModal} />
+        <Hero handleOpenModal={handleOpenModal} textLocation="left" />
+        
+        <StatsGeo />
 
-        <Clients/>
+        <BusinessMain handleOpenModal={handleOpenModal} />
+        
+        <AppIntroduction  handleOpenModal={handleOpenModal}/>
+        
+        
+        
+        <ProductPermit handleOpenModal={handleOpenModal} textLocation="right" />
+        <ProductReporting  handleOpenModal={handleOpenModal} textLocation="left" />
+        <ProductDataLake handleOpenModal={handleOpenModal} textLocation="right" />
+        <ProductPlatform  handleOpenModal={handleOpenModal} textLocation="left" />
+        
+        <div className="w-full text-center mb-18">
+        <h1 className="text-gradient font-bold text-4xl">
+          Transparent, Explainable and Traceable AI Assisted Decision Making
+        </h1>
+
+      </div>
+        <Transparency handleOpenModal={handleOpenModal} />
+       <div className="w-full text-center mb-18">
+        <h1 className="text-gradient font-bold text-4xl">
+          Why Geothermal Resources are the Future of the Global Energy Sector
+        </h1>
+        
+
+      </div>
+      
+        <GeothermalEnergySection handleOpenModal={handleOpenModal} />
+        
+        <StatsInvest />
+        <AboutUs />
+        
+        <FoundersSection />
+        
+        
         <CTA handleOpenModal={handleOpenModal} />
-        <GetStarted handleOpenModal={handleOpenModal} />
+        
+        
+        
+        <References />
+        <Modal isVisible={isModalVisible} onClose={handleCloseModal} />
+        
         <Footer/>
       </div>
-      <ChatBot />
-      <Modal isVisible={isModalVisible} onClose={handleCloseModal} />
+    
     </div>
   )
 }
