@@ -11,7 +11,7 @@ export default defineConfig({
   },
 
   preview: {
-    allowedHosts: ["squid-app-rzng4.ondigitalocean.app", "geotherm.eco"]
+    allowedHosts: ["squid-app-rzng4.ondigitalocean.app", "www.geotherm.eco"]
   }
   
 })
