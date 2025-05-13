@@ -77,7 +77,7 @@ const App = () => {
         <StatsInvest />
         <AboutUs />
         
-        <FoundersSection />
+        
         
         
         <CTA handleOpenModal={handleOpenModal} />
